@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Rapper Gifs</title>
+
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <h1 class="text-center">Rapper Gifs</h1>
+  </header>
+
+  <div class="container text-center">
+      <p>Click on a rapper below to see their top 10 trending gifs!</p>
+      <!-- Rendered buttons will get dumped Here  -->
+      <div id="buttons-view"></div>
+      <br>
+      <form id="gif-form">
+        <label for="gif-input">Add a Rapper</label>
+        <input type="text" id="gif-input"><br>
+        <br>
+        <!-- Button triggers new rapper to be added -->
+        <input id="add-gif" type="submit" value="Add a Rapper">
+      </form>
+      <br>
+      <div id="gifs-view"></div>
+  </div>
+  
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
+  
+</body>
+</html>
+
