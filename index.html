@@ -16,20 +16,21 @@
 </head>
 <body>
   <header>
-    <h1 class="text-center">Rapper Gifs</h1>
+    <h1 class="text-center">Top 10 Trending Rapper Gifs</h1>
   </header>
 
   <div class="container text-center">
-      <p>Click on a rapper below to see their top 10 trending gifs!</p>
+      <h4>Click on a rapper below to see their top 10 trending gifs!</h4>
       <!-- Rendered buttons will get dumped Here  -->
       <div id="buttons-view"></div>
       <br>
       <form id="gif-form">
-        <label for="gif-input">Add a Rapper</label>
-        <input type="text" id="gif-input"><br>
+        <label for="gif-input">Add a Rapper: </label>
+        <input type="text" id="gif-input">
+        <br>
         <br>
         <!-- Button triggers new rapper to be added -->
-        <input id="add-gif" type="submit" value="Add a Rapper">
+        <button id="add-gif" class="btn btn-success" type="submit">Add a Rapper</button>
       </form>
       <br>
       <div id="gifs-view"></div>

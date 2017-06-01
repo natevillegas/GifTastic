@@ -1,11 +1,11 @@
 // Initial array of rappers
-      var topics = ["Drake", "J. Cole", "Kendrick", "Lil Yachty"];
+      var topics = ["J. Cole", "Kendrick Lamar", "Lil Yachty", "Post Malone", "Chance the Rapper", "Kanye", "Future", "Lil Uzi Vert", "21 Savage", "Big Sean", "Young Thug", "Travis Scott", "Migos", "Gucci Mane", "Desiigner"];
 
       // displayRapperGifs function re-renders the HTML to display the appropriate content
       function displayRapperGifs() {
 
         var rapper = $(this).attr("data-name");
-        var giphyURL = "https://api.giphy.com/v1/gifs/search?q=" + rapper + "&limit=25&rating=pg-13&api_key=dc6zaTOxFJmzC";
+        var giphyURL = "https://api.giphy.com/v1/gifs/search?q=" + rapper + "&limit=10&rating=pg-13&api_key=dc6zaTOxFJmzC";
 
         //"http://www.omdbapi.com/?t=" + rapper + "&y=&plot=short&apikey=40e9cece";
 
@@ -15,6 +15,8 @@
           method: "GET"
         }).done(function(response) {
 
+          $("#gifs-view").empty();
+          $("#gifs-view").prepend("<h4> Click on the image to play the Gif </h4>");
 
           //console.log(response.data[0].rating);
           for (var j = 0; j < response.data.length; j++) {
@@ -48,7 +50,7 @@
             gifDiv.append(gifRating);
 
             // Putting the entire gif above the previous gifs
-            $("#gifs-view").prepend(gifDiv);
+            $("#gifs-view").append(gifDiv);
           }
 
         });
@@ -69,9 +71,10 @@
           // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
           var a = $("<button>");
           // Adds a class of rapper to our button
-          a.addClass("rapper");
+          a.addClass("rapper btn btn-primary");
           // Added a data-attribute
           a.attr("data-name", topics[i]);
+          a.attr("type", "button");
           // Provided the initial button text
           a.text(topics[i]);
           // Added the button to the buttons-view div
@@ -90,6 +93,8 @@
 
         // Calling renderButtons which handles the processing of our rapper array
         renderButtons();
+
+        $("#gif-input").val("");
 
       });
 
